@@ -140,7 +140,7 @@ Sitecore.Parser = new function () {
 	this.doubleEncode = function(element, entity, encodedEntity) {
 		while(true)
 		{
-			if(element.indexOf(entity) > 0)
+			if(element.indexOf(entity) > -1)
 			{
 				element = element.replace(entity, encodedEntity);
 			}
