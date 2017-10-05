@@ -1,5 +1,5 @@
 # Sitecore.Support.186623
-To fix HTML entities display issue
+To fix WFFM HTML entities display issue
 
 ## License  
 This patch is licensed under the [Sitecore Corporation A/S License for GitHub](https://github.com/sitecoresupport/Sitecore.Support.186623/blob/master/LICENSE).  
