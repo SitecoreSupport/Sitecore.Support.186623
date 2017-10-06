@@ -55,7 +55,9 @@
     <Compile Include="CheckHtmlEntities.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\zzz\Sitecore.Support.186623.config" />
+    <Content Include="App_Config\Include\zzz\Sitecore.Support.186623.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Sitecore.Parser.js" />
   </ItemGroup>
   <ItemGroup>

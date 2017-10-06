@@ -75,8 +75,13 @@ Sitecore.Parser = new function () {
                     } else {
                         // Fix bug 186623
 						// Original code
-						// list[tag] = this.innerHTML;
-						list[tag] = Sitecore.Parser.encodeEntities(this.innerHTML);
+                        // list[tag] = this.innerHTML;
+                        if (tag == 'PredefinedValidatorTextMessage') {
+                            list[tag] = Sitecore.Parser.encodeEntities(this.innerHTML);
+                        }
+                        else {
+                            list[tag] = this.innerHTML;
+                        }
                     }
                 });
             } else {
@@ -121,8 +126,14 @@ Sitecore.Parser = new function () {
             if (array[element] == null || array[element].wrap == null) {
 				// Fix bug 186623
 				// Original code
-				//value += '<' + element + '>' + (array[element] || '') + '</' + element + '>';				
-				value += '<' + element + '>' + (this.encodeEntities(array[element]) || '') + '</' + element + '>';
+                //value += '<' + element + '>' + (array[element] || '') + '</' + element + '>';
+
+                if (element == 'PredefinedValidatorTextMessage') {
+                    value += '<' + element + '>' + (this.encodeEntities(array[element]) || '') + '</' + element + '>';
+                }
+                else {
+                    value += '<' + element + '>' + (array[element] || '') + '</' + element + '>';
+                }
             }
         };
 
@@ -139,7 +150,7 @@ Sitecore.Parser = new function () {
 
 	this.doubleEncode = function(element, entity, encodedEntity) {
 		while(true)
-		{ 
+		{
 			if(element.indexOf(entity) > -1)
 			{
 				element = element.replace(entity, encodedEntity);
