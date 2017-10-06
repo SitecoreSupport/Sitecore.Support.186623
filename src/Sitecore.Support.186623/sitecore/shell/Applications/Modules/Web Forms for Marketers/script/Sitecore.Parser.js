@@ -127,7 +127,6 @@ Sitecore.Parser = new function () {
 				// Fix bug 186623
 				// Original code
                 //value += '<' + element + '>' + (array[element] || '') + '</' + element + '>';
-
                 if (element == 'PredefinedValidatorTextMessage') {
                     value += '<' + element + '>' + (this.encodeEntities(array[element]) || '') + '</' + element + '>';
                 }
