@@ -73,15 +73,7 @@ Sitecore.Parser = new function () {
                             list[tag] = value;
                         }
                     } else {
-                        // Fix bug 186623
-						// Original code
-                        // list[tag] = this.innerHTML;
-                        if (tag == 'PredefinedValidatorTextMessage') {
-                            list[tag] = Sitecore.Parser.encodeEntities(this.innerHTML);
-                        }
-                        else {
-                            list[tag] = this.innerHTML;
-                        }
+                        list[tag] = this.innerHTML;
                     }
                 });
             } else {

@@ -30,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -58,6 +59,7 @@
     <Content Include="App_Config\Include\zzz\Sitecore.Support.186623.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Sitecore.FormBuilder.js" />
     <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Sitecore.Parser.js" />
   </ItemGroup>
   <ItemGroup>
